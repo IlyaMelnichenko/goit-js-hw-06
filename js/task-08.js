@@ -1,7 +1,7 @@
 const formEl = document.querySelector('.login-form');
 
 formEl.addEventListener('submit', onSubmit);
-
+const profile ={};
 function onSubmit(event){
     event.preventDefault();
     
@@ -10,11 +10,10 @@ function onSubmit(event){
         alert("Будь ласка заповніть поля")
         
     }else{
-        const formData = new FormData(event.currentTarget)
-        formData.forEach((value,name)=>{
-            console.log(name+"="+value)
-        });
+       profile.email = formTargetEl.email.value; 
+       profile.password = formTargetEl.password.value; 
+       console.log(profile) 
+        };
         formEl.reset()
     }
 
-}

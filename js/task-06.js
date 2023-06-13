@@ -8,5 +8,4 @@ if(inputEl.value.length === parseInt(inputEl.getAttribute('data-length'))){
 }else {
     inputEl.classList.add('invalid');
 }
-
-});
+})
